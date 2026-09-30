@@ -20,7 +20,6 @@ ID          [a-zA-Z_][a-zA-Z0-9_]*
 INT         [0-9]+
 FLOAT       ({INT}\.[0-9]*([eE][+-]?{INT})?|{INT}[eE][+-]?{INT})
 WS          [ \t\r\n]+
-BANDERA     \xF0\x9F\x87\xB2\xF0\x9F\x87\xBD
 UTF8        [\xC2-\xDF][\x80-\xBF]|[\xE0-\xEF][\x80-\xBF]{2}|[\xF0-\xF4][\x80-\xBF]{3}
 
 %%
@@ -105,9 +104,8 @@ UTF8        [\xC2-\xDF][\x80-\xBF]|[\xE0-\xEF][\x80-\xBF]{2}|[\xF0-\xF4][\x80-\x
 
 {FLOAT}                 { return TOK_FLOAT_LITERAL; }
 {INT}                   { return TOK_INT_LITERAL; }
-\'([^\\\n]|\\.)\'    { return TOK_CHAR_LITERAL; }
-\"([^\\\"\n]|\\.)*\"  { return TOK_STRING_LITERAL; }
-{BANDERA}{ID}           { return TOK_VARIABLE; }
+\'([^\\\n]|\\.)\'       { return TOK_CHAR_LITERAL; }
+\"([^\\\"\n]|\\.)*\"    { return TOK_STRING_LITERAL; }
 {ID}                    { return TOK_IDENTIFIER; }
 
 <<EOF>>                 { return TOK_EOF; }
