@@ -1,0 +1,7 @@
+--- Errores léxicos a propósito ---
+tortilla total = 10 @ 3 # 2;
+tortilla año = 2026;
+tamal 🌮 = "rico";
+gritar("sin cerrar);
+gritar("sigue escaneando");
+--- Comentario que nunca se cierra

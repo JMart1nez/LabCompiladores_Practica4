@@ -1,0 +1,25 @@
+--- Pedido en la taquería ---
+de_la_abuela tortilla max = 12;
+
+receta salsa cobrar(tortilla tacos, salsa precio) {
+    servir tacos * precio + 0.5;
+}
+
+receta ayuno principal() {
+    tamal orden = "pastor\n";
+    chile letra = 'p';
+    picante hambre = con_todo;
+    tortilla bits[2];
+    pedir(orden);
+    cada_taco (chile c en orden) {
+        si_hay (c == letra) { otro_taco; } ni_modo { gritar(c); }
+    }
+    por_orden (tortilla i = 0; i < 2; i++) {
+        bits[i] = (i << 2) >> 1 & ~7 | 3 ^ 1;
+    }
+    sazonando (hambre && !(max <= 0) || max >= 1) {
+        hambre = sin_nada;
+        me_llene;
+    }
+    gritar(cobrar(max / 2 % 5 - 1, 1.5e1), max != 3, max > 1);
+}
