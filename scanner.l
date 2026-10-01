@@ -37,9 +37,9 @@ UTF8        [\xC2-\xDF][\x80-\xBF]|[\xE0-\xEF][\x80-\xBF]{2}|[\xF0-\xF4][\x80-\x
 
 {WS}                    { /* ignorar espacios */ }
 
-"tortilla"              { return TOK_KW_INT; }
+"enchilada"             { return TOK_KW_INT; }
 "salsa"                 { return TOK_KW_FLOAT; }
-"chile"                 { return TOK_KW_CHAR; }
+"pozole"                { return TOK_KW_CHAR; }
 "tamal"                 { return TOK_KW_STRING; }
 "picante"               { return TOK_KW_BOOL; }
 "ayuno"                 { return TOK_KW_VOID; }
