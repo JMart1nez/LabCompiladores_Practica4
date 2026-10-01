@@ -1,1 +1,4 @@
 .DS_Store
+/scanner
+lex.yy.c
+*.o

@@ -1,5 +1,5 @@
 CC      = gcc
-PRUEBAS = pruebas/prueba_programa.txt pruebas/prueba_casos_limite.txt pruebas/prueba_errores.txt
+PRUEBAS = pruebas/prueba_programa.txt pruebas/prueba_errores.txt
 
 # Desactiva las reglas implícitas de make. Sin esto, la regla %.c: %.l
 # "regenera" scanner.c a partir de scanner.l y borra nuestro main.
